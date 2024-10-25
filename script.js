@@ -75,9 +75,12 @@ function nature(){
 
     divBtn.innerHTML = " <button onclick='belives()'>Belives</button>   <button onclick='future()'>Future</button>   <button onclick='worth()'>Worth</button>  " ;
 
-
-
 }
+
+// scrolling
+
+var copy = document.querySelector(".skills-slide").cloneNode(true);
+document.querySelector(".skills").appendChild(copy);
 
 
 

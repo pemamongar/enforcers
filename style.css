@@ -18,12 +18,6 @@ a{
     text-decoration: none;
 }
 
-p{
-    font-size: 18px;
-    margin-top: 20px;
-}
-
-
 
 /* nav bar */
 nav {
@@ -176,7 +170,7 @@ nav ul li a:hover {
 
     #sec1 img{
         object-fit: cover;
-        height: 75vh;
+        height: 70vh;
     }
 
 } 
@@ -200,8 +194,9 @@ nav ul li a:hover {
 
 #sec2{
     padding: 40px;
-    display: flex;
-    text-align: left;
+    padding-bottom: 10px;
+    display: block;
+    text-align: center;
     background-color: #C9E9D2; 
     width: 100vw;
     align-items: center;
@@ -212,26 +207,73 @@ nav ul li a:hover {
 
 #sec2 h1{
     font-size: 30px;
-    margin-top: 60px;
+    margin-top: 20px;
     font-size: 40px;
     margin-bottom: 15px;
 }
 
 #sec2div1{
-    width: 50%;
+    width: 100%;
     padding: 0px 20px ;
+    padding-bottom: 30px;
 }
 
-#sec2div2 {
-    background-image: url("images/img3.webp");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 350px;
-    width: 450px;
-    margin-top: 10px;
-    margin-right: 40px;
-    border-radius: 5px;    
-}
+/* scrolling */
+
+@keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .skills {
+    overflow: hidden;
+    padding: 20px 0;
+    background-color: #C9E9D2; 
+    white-space: nowrap;
+    position: relative;
+  /*   top: 100px; */
+  }
+  
+  
+  .skills:before,
+  .skills:after {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+  }
+  
+  .skills:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+  }
+  
+  .skills:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+  }
+  
+  .skills:hover .logos-slide {
+    animation-play-state: paused;
+  }
+  
+  .skills-slide {
+    display: inline-block;
+    animation: 35s slide infinite linear;
+  }
+  
+  .skills-slide img {
+    height: 220px;
+    width: 200px;
+    margin: 0 20px;
+    object-fit: cover;
+  }
 
 
 @media (max-width:480px){
@@ -246,9 +288,6 @@ nav ul li a:hover {
         margin: 0 auto;
     }
 
-    #sec2div2{
-        width: 100%;
-    }
 
     #sec2 h1{
         margin-top: 0;
@@ -261,6 +300,15 @@ nav ul li a:hover {
         display: none;
     }
 
+    .skills-slide img {
+        height: 150px;
+    }
+      
+      .skills:after {
+        right: 0;
+        background: none;
+      }
+
 
 
 }
@@ -270,6 +318,10 @@ nav ul li a:hover {
 
     #sec2div2{
         margin-right: 14px;
+    }
+
+    .skills-slide img{
+        height: 180px;
     }
 
 
@@ -522,9 +574,6 @@ background-image: url("images/journy.webp");
 
 /* This is our footer */
 
-
-
-
 #footerDiv2{
     height: 200px;
     
@@ -560,6 +609,13 @@ footer .i{
     max-width: 200px;
     font-size: 16px;
     display: flex;
+    border-right: 1px solid;
+    padding-right: 10px;
+    height: 100px;
+}
+
+.address p{
+    padding-left: 5px;
 }
 
 .footer-bottom {
@@ -601,12 +657,41 @@ footer .i{
 
     .footer-content {
         position: relative;
-        left: 10vw;
         width: 100%;
+    }
+
+    footer .footer-content{
+        font-size: 10px;
+        display: block;
+        width: 100%;
+        left: 0;
+        padding-left: 25%;
     }
     
     .address, .phone, .email{
-        font-size: 12px;
+        font-size: 10px;
+        border: none;
+        width: 100%;
+        height: 50px;
+    }
+
+    .address p, .phone p, .email p{
+        padding-left: 0;
+        margin-left: 0;
+        margin: 0 auto;
+    }
+
+    .address i,p, .phone p, .email i,p{
+        margin: 0 auto;
+    }
+
+    .phone i{
+        position: relative;
+        left: 22px;
+    }
+
+    .address i, .phone i, .email i{
+        font-size: 16px;
     }
 
     footer{
@@ -614,18 +699,15 @@ footer .i{
         padding-bottom: 0;
     }
 
-    .footer-bottom{
-        padding-top: 5vh;
-        margin: 0;
-    }
     
     .footer-bottom p{
         font-size: 10px;
-
+        position: relative;
+        bottom: 10vh;
     }
 
     #footerDiv2{
-        height: 150px;
+        height: fit-content;
     }
 
     footer h3{
