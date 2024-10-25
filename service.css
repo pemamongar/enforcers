@@ -1,0 +1,392 @@
+
+
+*{
+  font-family: Trebuchet;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  scroll-behavior: smooth;
+}
+
+#overView{
+  overflow: hidden;
+}
+
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+p{
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+
+
+/* nav bar */
+nav {
+  width: 100vw;
+  background:lightblue;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:14px ;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+
+}
+
+nav img{
+      width: 14%;
+      border-radius: 50%;
+}
+
+svg.svg-inline--fa.fa-bars {
+  color:lightblue;
+  font-size: 23px;
+  display: none;
+}
+#click {
+  display: none;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding-top: 10px ;
+  margin-right: 10px;
+}
+
+nav i{
+  color: lightblue;
+  display: none;
+}
+
+nav ul li {
+  margin: 0 30px;
+  font-size: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+  transition: 0.5s;
+  padding: 2px 6px;
+
+}
+
+nav ul li a:hover {
+  color:black;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+
+/* Media Query */
+@media (max-width: 480px) {
+  nav .logo {
+      color: #fff;
+      font-weight: bold;
+      font-size: 2em;
+  }
+
+  svg.svg-inline--fa.fa-bars {
+      display: block;
+      cursor: pointer;
+  }
+
+  nav{
+      position: fixed;
+      padding: 22px;
+  }
+
+  nav ul {
+      list-style: none;
+      position: fixed;
+      top: -100%;
+      left: 0px;
+      background-color: lightblue;
+      height: 80vh;
+      width: 100%;
+      display: block;
+      text-align: center;
+      transition: 1s ease-in;
+  }
+
+  #click:checked ~ ul {
+      top: 80px;
+  }
+
+  nav ul li {
+      margin: 0 30px;
+      font-size: 25px;
+      margin: 40px 0;
+  }
+
+  nav i{
+      color: black;
+     z-index: 2;
+  }
+
+  nav ul li a {
+      color: black;
+      font-size: large;
+      text-decoration: none;
+      transition: 0.5s;
+      padding: 0px 5px;
+  }
+
+  nav ul li a:hover,
+  nav ul li a.active {
+      border: 1px solid #fff;
+      color: black;
+      background-color: #fff;
+      border-radius: 5px;
+  }
+
+}
+
+@media (max-width:768px){
+
+  nav ul li {
+      font-size: 16px;
+  }
+
+}
+
+
+
+
+
+   
+  /* main content */ 
+   
+  #main{ 
+    padding-top: 100px; 
+  } 
+  #container1 { 
+    color: white;  
+    text-align: center; 
+  } 
+   
+  .color { 
+    color: black; 
+  } 
+   
+  /* Container for services */ 
+  #divcontainer { 
+    display: flex; 
+    justify-content: center;  
+    flex-wrap: wrap;  
+    gap: 8px; 
+     
+     
+  } 
+   
+  /* Styling for each service container */ 
+  #container2, #container3 { 
+    width: 500px;   
+    text-align: center; 
+    margin: 15px;  
+    position: relative; 
+    right: 5px; 
+   
+  } 
+   
+  /* service boxes */ 
+  #div1, #div2, #div3, #div4 { 
+    width: 500px;  
+    border-radius: 10px; 
+    padding: 20px; 
+    box-shadow: 0px 0px 5px grey; 
+    margin-bottom: 35px; 
+   
+  } 
+   
+  #div1{ 
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0,0,0,0.1)),url("images/tour.webp");
+    background-size: cover; 
+    background-repeat: no-repeat; 
+     
+  } 
+   
+  #div2{ 
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0,0,0,0.5)),url("images/guids.webp"); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+  } 
+   
+  #div3{ 
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0,0,0,0.2)),url("images/3.webp");
+    background-size: cover; 
+    background-repeat: no-repeat; 
+     
+  } 
+   
+  #div4{ 
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0,0,0,0.4)),url("images/Tsha-Zo.webp");
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    height: 185px; 
+  } 
+   
+   
+   
+   
+  /* Button styles */ 
+  button { 
+    border-radius: 3px; 
+    background-color: rgba(0, 0, 0, 0.4); 
+    color: white; 
+    border: none; 
+    padding: 10px 15px;  
+    cursor: pointer; 
+    box-shadow: 0px 0px 10px rgb(45, 43, 41); 
+  } 
+   
+  button:hover { 
+    background-color:rgb(104, 128, 116);  
+  } 
+  #div4 button{ 
+    position: relative; 
+    bottom: 20px; 
+  } 
+  @media (max-width: 480px){
+
+    #container1{
+      padding-top: 35px;
+    }
+
+    #container1 h3 {
+      padding: 20px;
+    }
+
+
+
+  }
+
+
+  
+
+/* This is our footer */
+
+
+
+#footerDiv2{
+  height: 200px;
+  
+}
+
+footer {
+  padding:  10px;
+  font-size: 14px;
+  background-color: lightblue;
+  height: fit-content;
+}
+
+footer .i{
+  font-size: 28px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 60%;
+}
+
+.footer-content div {
+  flex: 1;
+  margin: 10px;
+}
+
+.address, .phone, .email {
+  max-width: 200px;
+  font-size: 16px;
+  display: flex;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 60px;
+}
+
+
+.footer-bottom p{
+  font-size: 16px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.social-icons a {
+  margin-right: 10px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.fa {
+  margin-right: 8px;
+}
+
+#footerDiv2{
+  padding: 0;
+}
+
+
+@media (max-width:480px) {
+
+  footer .i{
+   display: none;
+  }
+
+  .footer-content {
+      position: relative;
+      left: 10vw;
+      width: 100%;
+  }
+  
+  .address, .phone, .email{
+      font-size: 12px;
+  }
+
+  footer{
+      margin-bottom: 0;
+      padding-bottom: 0;
+  }
+
+  .footer-bottom{
+      padding-top: 5vh;
+      margin: 0;
+  }
+  
+  .footer-bottom p{
+      font-size: 10px;
+
+  }
+
+  #footerDiv2{
+      height: 150px;
+  }
+  
+}
+
+
+@media (max-width:768px){
+
+  .footer-content{
+      width: 80%;
+  }
+
+}

@@ -1,0 +1,440 @@
+
+*{
+    font-family: Trebuchet;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    scroll-behavior: smooth;
+}
+
+#overView{
+    overflow: hidden;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+button{
+    padding: 8px 15px;
+    font-size: medium;
+    margin-top: 20px;
+    border-radius: 8px;
+    background-color: #B7E0FF;
+    cursor: pointer;
+}
+
+button:hover{
+    background:linear-gradient(45deg,#B7E0FF,#FFCFB3,#C9E9D2);
+    padding: 10px 15px;
+    font-size: medium;
+    box-shadow: 0 0 10px gray;
+}
+
+
+p{
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+
+
+/* nav bar */
+nav {
+    width: 100vw;
+    background:lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:14px ;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+
+}
+
+nav img{
+        width: 14%;
+        border-radius: 50%;
+}
+
+svg.svg-inline--fa.fa-bars {
+    color:lightblue;
+    font-size: 23px;
+    display: none;
+}
+#click {
+    display: none;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 10px 0px;
+    margin-right: 10px;
+}
+
+nav i{
+    color: lightblue;
+    display: none;
+}
+
+nav ul li {
+    margin: 0 30px;
+    font-size: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    transition: 0.5s;
+    padding: 2px 6px;
+ 
+}
+
+nav ul li a:hover {
+    color:black;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+
+/* Media Query */
+@media (max-width: 480px) {
+    nav .logo {
+        color: #fff;
+        font-weight: bold;
+        font-size: 2em;
+    }
+
+    svg.svg-inline--fa.fa-bars {
+        display: block;
+        cursor: pointer;
+    }
+
+    nav{
+        position: fixed;
+        padding: 22px;
+    }
+
+    nav ul {
+        list-style: none;
+        position: fixed;
+        top: -100%;
+        left: 0px;
+        background-color: lightblue;
+        height: 80vh;
+        width: 100%;
+        display: block;
+        text-align: center;
+        transition: 1s ease-in;
+    }
+
+    #click:checked ~ ul {
+        top: 80px;
+    }
+
+    nav ul li {
+        margin: 0 30px;
+        font-size: 25px;
+        margin: 40px 0;
+    }
+
+    nav i{
+        color: black;
+       z-index: 2;
+    }
+
+    nav ul li a {
+        color: black;
+        font-size: large;
+        text-decoration: none;
+        transition: 0.5s;
+        padding: 0px 5px;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+        border: 1px solid #fff;
+        color: black;
+        background-color: #fff;
+        border-radius: 5px;
+    }
+
+}
+
+@media (max-width:768px){
+
+    nav ul li {
+        font-size: 16px;
+    }
+
+}
+
+
+
+
+ 
+
+
+/* first section */
+ #pDiv #div ol{
+    margin-top: 20px;
+}
+#pDiv #div h1{
+    padding-top: 120px;
+}
+
+#pDiv #guidSec1{
+    margin-top: 40px;
+}
+
+#pDiv img{
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+    padding: 0 100px;
+    margin: 50px 0;
+}
+
+ #pDiv h2{
+    font-size: 25px;
+    margin: 20px 0;
+}
+
+
+#pDiv h3{
+    font-size: 22px;
+    margin: 20px 0;
+}
+
+#pDiv #div ol h3 a{
+    color: green;
+    text-decoration: none; 
+}
+
+#pDiv span{
+    font-size: 20px;
+}
+
+#pDiv p{
+    margin: 5px 0 20px 0;
+}
+
+#pDiv p,h1,h3,h2,span{
+    padding: 0 100px;
+}
+
+#div h3{
+    width: 200px;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px grey;
+    text-align: center;
+}
+
+#div h1{
+    text-align: center;
+}
+
+#div ol{
+    display: block;
+    list-style-type: none;
+}
+
+#div ol div{
+    display: flex;
+    justify-content: space-around;
+}
+
+#div h3:hover{
+    background-color: #C9E9D2;
+}
+
+
+
+@media (max-width:480px) {
+
+    #pDiv #div h1{
+        padding-top: 160px;
+    }
+
+
+    #pDiv #div ol h3 a{
+        font-size: 16px;
+        padding: 5px;
+        box-shadow: 0 0 5px gray;
+        border-radius: 5px;
+     
+    }
+
+    #pDiv #div ol h3 a:hover{
+        background-color: #C9E9D2;
+    }
+
+    #div #divh3{
+        position: relative;
+        right: 22vw;
+    }
+
+    #div h3 {
+        box-shadow: none;
+    }
+
+    #div h3:hover{
+        background-color: white;
+    }
+
+    #pDiv{
+        text-align: center;
+    }
+
+    
+}
+
+
+@media (max-width:768px){
+
+    #div h3{
+        width: 300px;
+    }
+
+    #div ol div{
+        display: block;
+    }
+
+    #div ol{
+        display: flex;
+        justify-content: space-around;
+    }
+
+
+
+
+
+}
+
+
+
+
+
+/* This is our footer */
+
+
+
+#footerDiv2{
+    height: 200px;
+    
+}
+
+footer {
+    padding:  10px;
+    font-size: 14px;
+    background-color: lightblue;
+    height: fit-content;
+}
+
+footer .i{
+    font-size: 28px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 60%;
+}
+
+.footer-content div {
+    flex: 1;
+    margin: 10px;
+}
+
+.address, .phone, .email {
+    max-width: 200px;
+    font-size: 16px;
+    display: flex;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 60px;
+}
+
+
+.footer-bottom p{
+    font-size: 16px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.social-icons a {
+    margin-right: 10px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.fa {
+    margin-right: 8px;
+}
+
+#footerDiv2{
+    padding: 0;
+}
+
+
+@media (max-width:480px) {
+
+    footer .i{
+     display: none;
+    }
+
+    .footer-content {
+        position: relative;
+        left: 10vw;
+        width: 100%;
+    }
+    
+    .address, .phone, .email{
+        font-size: 12px;
+    }
+
+    footer{
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .footer-bottom{
+        padding-top: 5vh;
+        margin: 0;
+    }
+    
+    .footer-bottom p{
+        font-size: 10px;
+
+    }
+
+    #footerDiv2{
+        height: 150px;
+    }
+    
+}
+
+
+@media (max-width:768px){
+
+    .footer-content{
+        width: 80%;
+    }
+
+}
