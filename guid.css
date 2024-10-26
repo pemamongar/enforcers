@@ -170,9 +170,6 @@ nav ul li a:hover {
 
 }
 
-
-
-
  
 
 
@@ -261,6 +258,10 @@ nav ul li a:hover {
 
 @media (max-width:480px) {
 
+   #div{
+    flex-direction: column;
+   }
+
     #pDiv p,h1,h3,h2,span{
         padding: 0px 40px;
     }
@@ -270,7 +271,7 @@ nav ul li a:hover {
     }
 
     #pDiv #div ol h3 a{
-        font-size: 16px;
+        font-size: 10px;
         padding: 5px;
         box-shadow: 0 0 5px gray;
         border-radius: 5px;
@@ -281,9 +282,20 @@ nav ul li a:hover {
         background-color: #C9E9D2;
     }
 
+    #div .divh3{
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        width: 150px;
+    }
+
     #div #divh3{
         position: relative;
-        right: 30vw;
+        right: 40%;
+    }
+
+    #div #divh31{
+        margin-right: 20%;
     }
 
     #div h3 {
@@ -297,6 +309,10 @@ nav ul li a:hover {
     #pDiv{
         text-align: center;
         width: 100%;
+    }
+
+    #pDiv img{
+        padding: 0 30px;
     }
 
     
