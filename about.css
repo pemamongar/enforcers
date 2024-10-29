@@ -337,12 +337,12 @@ nav ul li a:hover {
     }
 
     #second-Div img{
-        width: 60vw;
+        width: 50vw;
         margin-left: 0;
         margin: auto;
         position: relative;
-        right: 8vw;
-    }
+        left: 11%;   
+ }
 
     #second-Div .about2{
       text-align: center;
